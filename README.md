@@ -1,6 +1,6 @@
 # LexNotify
 
-> AI legal-intelligence platform that monitors 48 Brazilian courts in real time — reads case documents, transcribes PT-BR audio, and generates branded legal filings for law firms. In production with recurring revenue.
+> AI legal-intelligence platform that monitors 48 Brazilian courts in real time. Reads case documents, transcribes PT-BR audio, and generates branded legal filings for law firms. In production with recurring revenue.
 
 **Stack:** TypeScript · Next.js · Node.js · Supabase · OpenAI · Whisper  
 **Status:** In production · Paying customers
@@ -9,7 +9,7 @@
 
 ## The problem
 
-Brazilian law firms managing hundreds of active cases face a brutal operational bottleneck: monitoring court deadlines manually across dozens of different court systems, each with its own portal and notification format. A missed deadline at the wrong stage means a case lost by default — with potential liability for the firm.
+Brazilian law firms managing hundreds of active cases face a brutal operational bottleneck: monitoring court deadlines manually across dozens of different court systems, each with its own portal and notification format. A missed deadline at the wrong stage means a case lost by default, with potential liability for the firm.
 
 Existing tools are either too generic (CRM software with no legal intelligence), too expensive (enterprise LegalTech priced for large firms), or simply don't cover the breadth of Brazilian courts.
 
@@ -35,12 +35,12 @@ Existing tools are either too generic (CRM software with no legal intelligence),
 **Filing generation**
 - Generates branded legal filings (petitions, responses, notifications) from structured case data
 - Supports firm-specific templates with custom formatting and header/footer
-- Output ready for direct submission — no reformatting needed
+- Output ready for direct submission, no reformatting needed
 
 **Alert system**
 - WhatsApp + email alerts for upcoming deadlines, new case events, and generated filings
 - Configurable urgency levels (7 days / 3 days / same day)
-- Per-attorney routing — each lawyer receives only their own caseload
+- Per-attorney routing: each lawyer receives only their own caseload
 
 ---
 
@@ -72,9 +72,9 @@ Supabase (cases, events, deadlines, documents)
 ```
 
 **Key design decisions:**
-- Per-court adapter pattern: each of the 48 courts has its own parser module, isolated from the core pipeline — adding a new court doesn't touch existing logic
-- Deadline rules as data: CPC deadline calculations are expressed as configurable rules, not hardcoded — allows non-dev updates when procedural rules change
-- Async document processing: documents and audio are processed in background workers; the attorney sees a "processing" state in the UI and gets notified on completion
+- Per-court adapter pattern: each of the 48 courts has its own parser module, isolated from the core pipeline. Adding a new court doesn't touch existing logic.
+- Deadline rules as data: CPC deadline calculations are expressed as configurable rules, not hardcoded. Allows non-dev updates when procedural rules change.
+- Async document processing: documents and audio are processed in background workers; the attorney sees a "processing" state in the UI and gets notified on completion.
 
 ---
 
@@ -100,4 +100,4 @@ Supabase (cases, events, deadlines, documents)
 
 ---
 
-*Built by [Maike Henrique](https://github.com/neomaike) — [linkedin.com/in/neomaike](https://linkedin.com/in/neomaike) — [lexnotify.com](https://lexnotify.com)*
+*Built by [Maike Neo](https://github.com/neomaike) · [linkedin.com/in/neomaike](https://linkedin.com/in/neomaike) · [lexnotify.com](https://lexnotify.com)*
